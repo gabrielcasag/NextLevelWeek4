@@ -27,7 +27,7 @@ interface ChallengesProviderProps {
 //cria o contexto
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
-export function ChallengesProvider({ children }:ChallengesProviderProps) {
+export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [level, setLevel] = useState(1);
   const [currentExp, setCurrentExp] = useState(0);
   const [challengesCompleted, setChallengesCompeted] = useState(0);
