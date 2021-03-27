@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Sobre o projeto
 
-## Getting Started
+Este é um projeto [Next.js](https://nextjs.org/) criado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) e desenvolvido durante a NextLevelWeek#4 disponibilizada pela @Rocketseat.
 
-First, run the development server:
+A ideia do aplicativo se basea na técnica de [pomodoro](https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro), que consiste em focar em uma atividade por um intervalo de tempo (geralmente 25min) e após isso desfocar por um período mais curto (geralmente 5min). 
+
+Para isso o aplicativo conta com um timer que pode ser ativado e com isso um ciclo se inicia, onde o usuário deverá realizar a sua tarefa planejada com foco máximo. 
+Após iniciado um ciclo, o usuário pode abandonar o mesmo caso tenha perdido o foco na tarefa, porém o timer irá resetar e será necessário se preparar para um novo ciclo.
+Chegado ao fim de um ciclo (25min) o aplicativo irá emitir uma notificação ao usuário (se o mesmo tiver permitido) e lançará um desafio em forma de exercício.
+Se o usuário completar o desafio lançado ele deve clicar no botão "Completei" computando experiência para seu perfil, podendo subir de nível.
+
+## Rodando o ambiente de desenvolvimento
+
+Para rodar o ambiente de desenvolvimento no seu local utilize o comando que convém para você!
+Nesse projeto foi utilizado o yarn como gerenciador de pacotes
 
 ```bash
 npm run dev
-# or
+# OU
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodando o ambiente de produção
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Para gerar uma release(build) do app e verificar localmente como se estivesse no ambiente de produção utilize:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run build
+# OU
+yarn build
+```
+e depois
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm run start
+# OU
+yarn start
+```
 
-## Learn More
+## Visualizando a aplicação
 
-To learn more about Next.js, take a look at the following resources:
+Abra o seu [localhost:3000](http://localhost:3000/) e veja o resultado.
+Se tudo correu bem, a aplicação aparecerá para você assim como veremos nas imagens abaixo.. 😁
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Imagens da aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://user-images.githubusercontent.com/52332643/112731029-a6c4d480-8f13-11eb-9986-484c2bc9c602.png)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Aprenda mais
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Para aprender mais sobre as tecnologias utilizadas nessa aplicação recomenda-se as seguintes referências:
+
+- [Next.js Docs](https://nextjs.org/docs) 
+- [Aprenda Next.js](https://nextjs.org/learn)
+- [Rocketseat](https://app.rocketseat.com.br/)
+- [Next.js Deploy](https://nextjs.org/docs/deployment)
+
+## Publicado em produção pela Vercel
+
+[https://moveit-gbrl.vercel.app/](https://moveit-gbrl.vercel.app/)
