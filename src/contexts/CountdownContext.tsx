@@ -17,7 +17,7 @@ interface CountdownProviderProps {
 export const CountdownContext = createContext({} as CountdownContextData)
 
 let countdownTimeout: NodeJS.Timeout; //delay no reset countdowm
-let maxTime = 0.1;
+let maxTime = 25;
 
 export function CountdownProvider({children}: CountdownProviderProps) {
   const { startNewChallenge } = useContext(ChallengesContext);
