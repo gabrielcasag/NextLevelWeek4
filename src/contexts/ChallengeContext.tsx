@@ -1,6 +1,7 @@
-import challenges from '../../challenges.json';
-
 import { createContext, ReactNode, useEffect, useState } from "react";
+import Cookies from 'js-cookie';
+
+import challenges from '../../challenges.json';
 
 interface Challenge {
   type: 'body' | 'eye';
@@ -40,6 +41,12 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   }, []); 
   //qnd o array de dep eh vazio executa uma unica vez qnd o compomente for exibido
 
+  useEffect(() => {
+    Cookies.set("level", String(level));
+    Cookies.set("currentExp", String(currentExp));
+    Cookies.set("challengesCompleted", String(challengesCompleted));
+  }, [level, currentExp, challengesCompleted]);
+
   function levelUp() {
     setLevel(level + 1);
   }
@@ -58,7 +65,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     
     if (Notification.permission === 'granted') {
       new Notification("Novo desafio no pedaço 🚀", {
-        body: `Ta valendo ${challenge.amount}`
+        body: `Ta valendo ${challenge.amount} XP!!`
       });
     }
   }
